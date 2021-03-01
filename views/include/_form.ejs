@@ -1,0 +1,49 @@
+<form action="/api/users" method="POST" id="add_user">
+    <div class="new_user">
+        <div class="form-group">
+            <label for="nama" class="text-dark">Nama Penyewa</label>
+            <input type="hidden" name="id" value="">
+            <input type="text" name="nama" value="" placeholder="">
+        </div>
+
+        <div class="form-group">
+            <label for="alamat" class="text-dark">Alamat</label>
+            <input type="text" name="alamat" value="" placeholder="">
+        </div>
+
+        <div class="form-group">
+            <label for="jenis" class="text-dark">Jenis Mobil</label>
+            <select class="form-control" name="jenis">
+                <option></option>
+                <option value="Avanza">Avanza</option>
+                <option value="Daihatsu">Daihatzu</option>
+                  <option value="Toyota">Toyota</option>
+                  <option value="Suzuki">Suzuki</option>
+                  <option value="Mitshubishi">Mitshubisi</option>
+            </select>
+           
+
+        </div>
+
+        <div class="form-group">
+            <label for="nohp" class="text-dark">No Handphone</label>
+            <input type="text" name="nohp" value="" placeholder="">		
+        </div>
+
+        <div class="form-group">
+            <label for="waktu" class="text-dark">Waktu</label>
+            <input type="text" name="waktu" value="" placeholder="">
+        </div>
+
+        <div class="form-group">
+            <label for="total" class="text-dark">Total Harga</label>
+            <input type="text" name="total" value="" placeholder="">
+        </div>	
+        </div>	
+
+        <div class="form-group">
+            <button type="submit" class="btn text-dark-update">Simpan</button>
+        </div>
+    </div>
+            
+</form>

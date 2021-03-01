@@ -1,0 +1,42 @@
+<!-- include header  -->
+<%-include('include/_header')%>
+
+	<main id="site-main">
+		<div class="container">
+			<div class="box-nav d-flex-justify-between">
+				<a href="/add-user" class="border-shadow">
+					<span class="text-gradient">Tambahkan <i class="fas fa-user"></i> </span>
+				</a>
+			</div>
+
+			<div class=" form-title text-center">
+				<h2 class="text-dark">Rekaptulasi Data Sewa Mobil</h2>
+			</div>
+		
+
+	<form action="/" method="POST">
+		<table class="table">
+			<thead class="thead-drak">
+				<tr>
+					<th>No</th>
+					<th>Nama Penyewa</th>
+					<th>Alamat</th>
+					<th>Jenis Mobil</th>
+					<th>No HP</th>
+					<th>Waktu</th>
+					<th>Total</th>
+					<th>Aksi</th>
+				</tr>
+			</thead>
+			<tbody>
+				<%-include('include/_show')%>
+			</tbody>
+		</table>
+	</form>
+	
+  </div>
+</main>
+
+
+<%-include('include/_footer')%>
+

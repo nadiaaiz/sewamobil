@@ -1,0 +1,72 @@
+<%-include('include/_header')%>
+
+<main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex-justify-between">
+            <div class="filter">
+                <a href="/"><i class="fas fa-angle-double-left"></i> Halaman Utama</a>
+            </div>				
+        </div>
+        <div class="form-title text-center">
+            <h2 class="text-dark">Perbarui data Penyewa</h2>
+            <span class="text-light">Perbarui data user</span>
+        </div>
+
+        <form method="POST" id="update_user">
+            <div class="new_user">
+                <div class="form-group">
+                    <label for="nama" class="text-dark">Nama Penyewa</label>
+                    <input type="hidden" name="id" value="<%= user._id %>">
+                    <input type="text" name="nama" value="<%= user.nama %>" placeholder="">
+                </div>
+        
+                <div class="form-group">
+                    <label for="alamat" class="text-dark">Alamat</label>
+                    <input type="text" name="alamat" value="<%= user.alamat %>" placeholder="">
+                </div>
+        
+                <div class="form-group">
+                    <label for="jenis" class="text-dark">Jenis Mobil</label>
+                    <select id="jenis" name="jenis">
+                        <option></option>
+                        <option value="Avanza" <%= user.jenis == 'Avanza' ? 'checked' : '' %>>Avanza</option>
+                        <option value="Daihatsu" <%= user.jenis == 'Daihatsu' ? 'checked' : '' %>>Daihatzu</option>
+                          <option value="Toyota" <%= user.jenis == 'Toyota' ? 'checked' : '' %>>Toyota</option>
+                          <option value="Suzuki" <%= user.jenis == 'Suzuki' ? 'checked' : '' %>>Suzuki</option>
+                          <option value="Mitshubishi" <%= user.jenis == 'Mitshubishi' ? 'checked' : '' %>>Mitshubisi</option>
+                    </select>
+                                    
+                </div>
+    
+         
+                <div class="form-group">
+                    <label for="nohp" class="text-dark">No Handphone</label>
+                    <input type="text" name="nohp" value="<%= user.nohp %>" placeholder="">		
+                </div>
+        
+                <div class="form-group">
+                    <label for="waktu" class="text-dark">Waktu</label>
+                    <input type="text" name="waktu" value="<%= user.waktu %>" placeholder="">
+                </div>
+        
+                <div class="form-group">
+                    <label for="total" class="text-dark">Total Harga</label>
+                    <input type="text" name="total" value="<%= user.total %>" placeholder="">
+                </div>	
+             
+        
+                <div class="form-group">
+                    <button type="submit" class="btn text-dark-update">Simpan</button>
+                </div>
+            </div>
+        </div>	       
+        </form>
+
+
+       
+    </div>
+
+</div>
+</main>
+
+<%-include('include/_footer')%>
